@@ -1,0 +1,349 @@
+.index-container {
+  display: grid;
+  grid-template-columns: 1.3fr 3fr 1.3fr;
+  grid-template-rows: 1fr 0.7fr 2.7fr 2fr 1fr 4fr 35px;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "margin__izquierdo navBar margin__derecho" "margin__izquierdo index__Titulo__Container margin__derecho" "margin__izquierdo index__VideoyTexto__Container margin__derecho" "margin__izquierdo index__Suscripciones__Container margin__derecho" "margin__izquierdo index__ManteneteActivado__Container margin__derecho" "margin__izquierdo index__Contacto__Container margin__derecho" "margin__izquierdo footer margin__derecho"; }
+
+.navBar {
+  grid-area: navBar;
+  background-color: black; }
+  .navBar .menuDeNavegacion li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Bungee";
+    flex-wrap: wrap; }
+
+.menuDeNavegacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: center;
+  background-color: black;
+  padding-right: 30px; }
+
+@media (max-width: 1500px) {
+  .navBar .menuDeNavegacion li a {
+    font-size: 10px; } }
+
+.index__Titulo__Container {
+  grid-area: index__Titulo__Container;
+  text-align: center;
+  text-shadow: 2rem;
+  font-size: 15px;
+  font-family: "Bungee";
+  font-weight: bolder;
+  background-color: black;
+  color: white; }
+
+@media (max-width: 1500px) {
+  .index__Titulo__Container {
+    font-size: 10px; } }
+
+.index__VideoyTexto__Container {
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.1fr;
+  gap: 0px 0px;
+  grid-template-areas: "index__Video__Container" "index__Texto__Container";
+  grid-area: index__VideoyTexto__Container; }
+
+.index__Video__Container {
+  grid-area: index__Video__Container;
+  display: flex;
+  justify-content: space-around; }
+
+.index__Texto__Container {
+  grid-area: index__Texto__Container;
+  color: black;
+  background-color: white;
+  font-family: "Bungee";
+  font-size: smaller;
+  width: 80%;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-left: 90px; }
+
+@media (max-width: 1500px) {
+  .index__Texto__Container {
+    margin-left: 70px;
+    font-size: 10px; } }
+
+@media (max-width: 599px) {
+  .index__Texto__Container {
+    margin-left: 70px; } }
+
+.index__Suscripciones__Container {
+  grid-area: index__Suscripciones__Container;
+  background-color: black; }
+
+.suscripciones__titulo {
+  color: white;
+  font-size: 30px;
+  background-color: black;
+  font-weight: bolder;
+  font-family: "Bungee";
+  margin-left: 180px; }
+
+@media (max-width: 599px) {
+  .suscripciones__titulo {
+    font-size: 25px;
+    margin-left: 120px; } }
+
+@media (max-width: 1550px) {
+  .suscripciones__titulo {
+    margin-left: 60px; } }
+
+@media (max-width: 1375px) {
+  .suscripciones__titulo {
+    font-size: 25px; } }
+
+@media (max-width: 1200px) {
+  .suscripciones__titulo {
+    font-size: 20px;
+    margin-left: 90px; } }
+
+.suscripciones__parrafo {
+  color: white;
+  background-color: black;
+  font-size: small;
+  font-family: "Bungee";
+  text-align: center; }
+
+.suscripciones__email {
+  margin-top: 60px;
+  width: 200px;
+  height: 20px;
+  background: linear-gradient(to left, silver, white);
+  color: black;
+  font-family: "Bungee";
+  font-size: 10px; }
+
+.suscripciones__button {
+  margin-left: 30px;
+  font-family: "Bungee";
+  color: white;
+  background-color: black;
+  border: solid 2px white;
+  width: 150px;
+  height: 50px; }
+  .suscripciones__button:hover {
+    color: black;
+    background-color: white;
+    border: solid 2px black; }
+
+.suscripciones {
+  text-align: center; }
+
+.index__ManteneteActivado__Container {
+  grid-area: index__ManteneteActivado__Container;
+  background-color: black;
+  border: black solid 2px;
+  text-align: center;
+  background-image: url(../img/LogoPicantitoAchicadoFondoNegro.png);
+  background-repeat: repeat; }
+
+.canales__titulo {
+  color: white;
+  font-size: 30px;
+  background-color: black;
+  font-weight: bolder;
+  font-family: "Bungee";
+  text-align: center; }
+
+.index__Contacto__Container {
+  grid-area: index__Contacto__Container;
+  background-color: black; }
+
+.contactoIndex__titulo {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Bungee";
+  font-size: 2.5rem;
+  color: white; }
+
+.contactoIndex__NuestroContacto {
+  color: white;
+  font-family: "Bungee";
+  font-size: small; }
+  .contactoIndex__NuestroContacto ul {
+    display: flex;
+    justify-content: space-around; }
+
+.index__Contacto__Informacion {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end; }
+  .index__Contacto__Informacion input {
+    font-family: "Bungee";
+    font-size: 10px; }
+
+@media (max-width: 1375px) {
+  .index__Contacto__Informacion input {
+    font-size: 7px; } }
+
+.contactoIndex__Asunto {
+  margin-top: 20px;
+  margin-left: 63px; }
+
+@media (max-width: 599px) {
+  .contactoIndex__Asunto {
+    margin-left: 20px; } }
+
+@media (max-width: 1875px) {
+  .contactoIndex__Asunto {
+    margin-left: 60px; } }
+
+@media (max-width: 1800px) {
+  .contactoIndex__Asunto {
+    margin-left: 55px; } }
+
+@media (max-width: 1700px) {
+  .contactoIndex__Asunto {
+    margin-left: 40px; } }
+
+@media (max-width: 1500px) {
+  .contactoIndex__Asunto {
+    margin-left: 33px; } }
+
+@media (max-width: 1200px) {
+  .contactoIndex__Asunto {
+    margin-left: 13px; } }
+
+@media (max-width: 1024px) {
+  .contactoIndex__Asunto {
+    margin-left: 0px; } }
+
+.contactoIndex__Asunto input {
+  font-family: "Bungee";
+  font-size: 10px; }
+
+@media (max-width: 1375px) {
+  .contactoIndex__Asunto input {
+    font-size: 7px;
+    margin-left: 20px; } }
+
+.contactoIndex__Mensaje {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px; }
+
+.contactoIndex__Mensaje textarea {
+  font-family: "Bungee";
+  font-size: 10px;
+  width: 600px;
+  height: 200px; }
+
+@media (max-width: 1375px) {
+  .contactoIndex__Mensaje textarea {
+    font-size: 7px; } }
+
+@media (max-width: 1200px) {
+  .contactoIndex__Mensaje textarea {
+    width: 500px;
+    height: 100px; } }
+
+@media (max-width: 768px) {
+  .contactoIndex__Mensaje textarea {
+    width: 8rem;
+    height: 15rem; } }
+
+#BotonEnviarIndex {
+  margin-top: 60px;
+  margin-left: 27rem;
+  font-family: "Bungee";
+  color: white;
+  background-color: black;
+  border: solid 2px white;
+  width: 150px;
+  height: 50px; }
+  #BotonEnviarIndex:hover {
+    color: black;
+    background-color: white;
+    border: solid 2px black; }
+
+@media (max-width: 599px) {
+  #BotonEnviarIndex {
+    margin-left: 19.5rem; } }
+
+@media (max-width: 1900px) {
+  #BotonEnviarIndex {
+    margin-left: 26rem; } }
+
+@media (max-width: 1850px) {
+  #BotonEnviarIndex {
+    margin: left 24rem; } }
+
+@media (max-width: 1700px) {
+  #BotonEnviarIndex {
+    margin-left: 22rem; } }
+
+@media (max-width: 1500px) {
+  #BotonEnviarIndex {
+    margin-left: 20rem; } }
+
+@media (max-width: 1200px) {
+  #BotonEnviarIndex {
+    margin-left: 15rem; } }
+
+@media (max-width: 1024px) {
+  #BotonEnviarIndex {
+    margin-left: 12rem; } }
+
+.footer {
+  grid-area: footer;
+  color: white;
+  font-family: "Bungee";
+  font-size: 10px;
+  background-color: #3f1368; }
+  .footer p {
+    display: flex;
+    justify-content: space-around; }
+
+@media (max-width: 1024px) {
+  .footer p {
+    grid-area: footer;
+    color: white;
+    font-family: "Bungee";
+    font-size: 10px;
+    background-color: #3f1368; } }
+
+@media (max-width: 768px) {
+  .footer p {
+    grid-area: footer;
+    color: white;
+    font-family: "Bungee";
+    font-size: 7px;
+    background-color: #3f1368; } }
+
+@media (max-width: 320px) {
+  .footer p {
+    grid-area: footer;
+    color: white;
+    font-family: "Bungee";
+    font-size: 5px;
+    background-color: #3f1368; } }
+
+.margin__izquierdo {
+  grid-area: margin__izquierdo;
+  background-color: black; }
+
+.margin__derecho {
+  grid-area: margin__derecho;
+  background-color: black; }
+
+.logoMenuDeNavegacion:hover {
+  transform: scale(1.05); }
+
+.navBar .menuDeNavegacion li .subrayado:hover {
+  border-bottom: solid 2px white; }
+
+.logoMenuDeNavegacion:hover {
+  transform: scale(1.05); }
+
+.navBar .menuDeNavegacion li .subrayado:hover {
+  border-bottom: solid 2px white; }

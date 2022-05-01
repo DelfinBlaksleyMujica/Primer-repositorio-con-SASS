@@ -1,0 +1,13 @@
+@import "variables";
+@import "grillas";
+@import "pseudoclases";
+
+
+
+.logoMenuDeNavegacion:hover{
+    transform: scale(1.05);
+}
+
+.navBar .menuDeNavegacion li .subrayado:hover{
+    border-bottom:solid 2px white;
+}
