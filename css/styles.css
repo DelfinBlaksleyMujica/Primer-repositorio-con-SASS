@@ -1,3 +1,13 @@
+/*Mixins*/
+/*MAP GET*/
+.botonIndex, .suscripciones__button, #BotonEnviarIndex {
+  font-family: "Bungee";
+  color: white;
+  background-color: black;
+  border: solid 2px white;
+  width: 150px;
+  height: 50px; }
+
 .index-container {
   display: grid;
   grid-template-columns: 1.3fr 3fr 1.3fr;
@@ -31,13 +41,13 @@
 
 .index__Titulo__Container {
   grid-area: index__Titulo__Container;
+  color: white;
+  font-size: 0.95rem;
+  font-family: "Bungee";
   text-align: center;
   text-shadow: 2rem;
-  font-size: 15px;
-  font-family: "Bungee";
   font-weight: bolder;
-  background-color: black;
-  color: white; }
+  background-color: black; }
 
 @media (max-width: 1500px) {
   .index__Titulo__Container {
@@ -55,6 +65,7 @@
 .index__Video__Container {
   grid-area: index__Video__Container;
   display: flex;
+  flex-direction: row;
   justify-content: space-around; }
 
 .index__Texto__Container {
@@ -124,13 +135,7 @@
   font-size: 10px; }
 
 .suscripciones__button {
-  margin-left: 30px;
-  font-family: "Bungee";
-  color: white;
-  background-color: black;
-  border: solid 2px white;
-  width: 150px;
-  height: 50px; }
+  margin-left: 30px; }
   .suscripciones__button:hover {
     color: black;
     background-color: white;
@@ -161,6 +166,7 @@
 
 .contactoIndex__titulo {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   font-family: "Bungee";
   font-size: 2.5rem;
@@ -172,10 +178,12 @@
   font-size: small; }
   .contactoIndex__NuestroContacto ul {
     display: flex;
+    flex-direction: row;
     justify-content: space-around; }
 
 .index__Contacto__Informacion {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: flex-end; }
   .index__Contacto__Informacion input {
@@ -229,6 +237,7 @@
 
 .contactoIndex__Mensaje {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   margin-top: 40px; }
 
@@ -254,13 +263,7 @@
 
 #BotonEnviarIndex {
   margin-top: 60px;
-  margin-left: 27rem;
-  font-family: "Bungee";
-  color: white;
-  background-color: black;
-  border: solid 2px white;
-  width: 150px;
-  height: 50px; }
+  margin-left: 27rem; }
   #BotonEnviarIndex:hover {
     color: black;
     background-color: white;
@@ -302,6 +305,7 @@
   background-color: #3f1368; }
   .footer p {
     display: flex;
+    flex-direction: row;
     justify-content: space-around; }
 
 @media (max-width: 1024px) {

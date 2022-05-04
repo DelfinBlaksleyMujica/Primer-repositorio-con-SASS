@@ -9,7 +9,7 @@ $color-footer:rgb(63, 19, 104);
 
 
 //Separaciones
-$separacion-margen:20px;
+$separacion-margen:100px;
 $separacion-padding:100px;
 
 //Tipografia
@@ -22,3 +22,19 @@ $ipad:1024px;
 $desktop:992px;
 $tablet:768px;
 $mobile:320px;
+
+/*Mixins*/
+
+@mixin flex-row-s_a {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+/*MAP GET*/
+
+$estilo-tipografia-titulos:(
+    color:white,
+    familia:"Bungee",
+    tFuente:0.95rem,
+);

@@ -1,3 +1,7 @@
+
+
+
+
 .index-container {  
     display: grid;
     grid-template-columns: 1.3fr 3fr 1.3fr;
@@ -28,13 +32,11 @@
 
 
 .menuDeNavegacion{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @include flex-row-s_a;
     list-style-type: none;
     align-items: center;
     background-color: $color-containers;
-    padding-right: 30px;
+    padding-right: ($separacion-padding/2)-20;
 }
 
 
@@ -50,13 +52,15 @@
 
 .index__Titulo__Container { 
     grid-area: index__Titulo__Container;
+    color:map-get($map: $estilo-tipografia-titulos, $key:color );
+    font-size:map-get($map: $estilo-tipografia-titulos, $key:tFuente);
+    font-family:map-get($map: $estilo-tipografia-titulos, $key:familia );
+
     text-align: center;
     text-shadow: 2rem;
-    font-size: 15px;
-    font-family: $tipografia-textos;
     font-weight: bolder;
     background-color: $color-containers;
-    color: $color-titulos;
+    
 }
 
 @media (max-width:1500px) {
@@ -80,8 +84,7 @@
 
 .index__Video__Container { 
     grid-area: index__Video__Container;
-    display:flex;
-    justify-content: space-around; 
+    @include flex-row-s_a; 
 }
 
 .index__Texto__Container { 
@@ -92,13 +95,13 @@
     font-size: smaller;
     width: 80%;
     border-radius: 20px; 
-    margin-top: 50px;
-    margin-left: 90px;
+    margin-top: $separacion-margen/2;
+    margin-left: ($separacion-margen)-10px;
 }
 
 @media (max-width:1500px) {
     .index__Texto__Container{
-        margin-left: 70px;
+        margin-left: ($separacion-margen)-30px;
         font-size: 10px;
     }
     
@@ -106,7 +109,7 @@
 
 @media (max-width:599px) {
     .index__Texto__Container{
-        margin-left: 70px;
+        margin-left: ($separacion-margen)-30px;
     }
     
 }
@@ -123,7 +126,7 @@
     background-color: $color-containers;
     font-weight: bolder;
     font-family: $tipografia-titulos;
-    margin-left: 180px;
+    margin-left: ($separacion-margen*2)-20px;
 }
 
 @media (max-width:599px) {
@@ -174,13 +177,9 @@
 }
 
 .suscripciones__button{
+    @extend .botonIndex;
     margin-left: 30px;
-    font-family: $tipografia-textos;
-    color: $color-textos;
-    background-color: $color-containers;
-    border: solid 2px white;
-    width:150px;
-    height:50px;
+    
 
     &:hover{
         color: $color-textos-alternativo;
@@ -218,8 +217,7 @@
 }
 
 .contactoIndex__titulo{
-    display:flex;
-    justify-content: space-around;
+    @include flex-row-s_a;
     font-family: $tipografia-titulos;
     font-size: 2.5rem;
     color: $color-titulos;
@@ -230,15 +228,13 @@
     font-family: $tipografia-textos;
     font-size: small;
     ul {
-        display:flex;
-        justify-content: space-around;
+        @include flex-row-s_a;
     }
 }
 
 
 .index__Contacto__Informacion{
-    display:flex;
-    justify-content: space-around;
+    @include flex-row-s_a;
     align-items: flex-end;   
     input {
         font-family: $tipografia-textos;
@@ -323,8 +319,7 @@
 }
 
 .contactoIndex__Mensaje{
-    display:flex;
-    justify-content: space-around;
+    @include flex-row-s_a;
     margin-top: 40px;
 }
 
@@ -359,14 +354,9 @@
 }
 
 #BotonEnviarIndex{
+    @extend .botonIndex;
     margin-top: 60px;
     margin-left: 27rem;
-    font-family: $tipografia-textos;
-    color: $color-textos;
-    background-color: $color-containers;
-    border: solid 2px white;
-    width:150px;
-    height:50px;
     &:hover{
         color: $color-textos-alternativo;
         background-color: $color-containers-alternativo;
@@ -430,8 +420,7 @@
     font-size: 10px;
     background-color: $color-footer;
     p{
-        display:flex;
-        justify-content: space-around;
+        @include flex-row-s_a;
     }
 }
 
